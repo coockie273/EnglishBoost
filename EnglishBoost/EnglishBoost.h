@@ -43,16 +43,16 @@ class Table
 {
   friend class EnglishBoost;
   int tile_width;
-  int current_level=1;              //Переменная, в которой будет лежать id текущего уровня.
-  map<QString, int> words;        //map со словами и их длинной.
-  list<QString> synonyms;         //Синонимы  
-  int size_field;                 //Размер сетки (size_field*size_field)
-  vector<Peak*> peaks;       //Представление сетки в виде графа.
-  list<int> occupied_cells;// Поле для алгоритма размещения.
-  list<int> drawing_tiles;   //Номера ячеек, которые красим
+  int current_level=1;              
+  map<QString, int> words;        
+  list<QString> synonyms;          
+  int size_field;                 
+  vector<Peak*> peaks;       
+  list<int> occupied_cells;
+  list<int> drawing_tiles;   
   list<int> found_synonyms;
-  list<int> hint_letters;                                               //Подкрашиваем подскази!!
-  list<QString> found_words; //Все найденные слова
+  list<int> hint_letters;                                               
+  list<QString> found_words; 
   Tile** tbl;
   int showed_letters = 0;
   int index_showed_letter=-1;
@@ -61,9 +61,9 @@ public:
   Table(int scale, int c);
   void NewSize(int scale);
   void Draw(QPainter* QP);
-  void GetDataFromBD(int lvl);                // И эту
-  void ClearLastWay(int index, int j);        //Вспомогательная функция
-  void GeneratePositions();                   //Сам алгоритм размещения слов
+  void GetDataFromBD(int lvl);                
+  void ClearLastWay(int index, int j);        
+  void GeneratePositions();                   
   ~Table();
 };
 
@@ -118,7 +118,7 @@ class EnglishBoost:public QWidget
   QMediaPlayer* win;
   QMediaPlayer* mistake;
   QMediaPlayer* hint;
-  QString entered_word;       // Слово, которое натыкали
+  QString entered_word;       
   list<int>::iterator start_t;
   list<int>::iterator end_t;
   QList<QPushButton*> levels;

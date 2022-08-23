@@ -14,7 +14,7 @@ int Extract(QString& data)
 
 EnglishBoost::EnglishBoost()
 {
-	ConnectBD();                           //������������ � ��
+	ConnectBD();                           //Подключение к БД
 	QWidget* w = new QWidget;
 	this->setObjectName("SecondLay");
 	SF = 1; R = 0; G = 0; B = 0;
@@ -129,7 +129,7 @@ EnglishBoost::EnglishBoost()
 
 void EnglishBoost::timerEvent(QTimerEvent* event)
 {
-	if (TimerID)											// МБ слишком много всего напихано в таймер, выполняться будет досточно долго
+	if (TimerID)											
 	{
 		int x = this->mapFromGlobal(QCursor::pos()).x();
 		int y = this->mapFromGlobal(QCursor::pos()).y();
@@ -541,7 +541,7 @@ Table::Table(int scale,int c)
 {
 
 	current_level = c;
-	GetDataFromBD(current_level);			//�������� ������ �� ��
+	GetDataFromBD(current_level);			
 
 
 	for (int i = 0; i < size_field * size_field; i++) {
@@ -549,7 +549,7 @@ Table::Table(int scale,int c)
 	}
 
 
-	for (int i = 0; i < size_field * size_field - 1; i++) {			// ��������� ���� Peaks
+	for (int i = 0; i < size_field * size_field - 1; i++) {			
 		if ((i + 1) % size_field == 0) {
 			peaks[i]->AddCon(peaks[i + size_field]);
 		}
@@ -562,7 +562,7 @@ Table::Table(int scale,int c)
 			}
 		}
 	}
-	GeneratePositions();								//���������� ������������ ����
+	GeneratePositions();								
 	double coef = 0.1;
 	tile_width = (scale*(double(1-coef))) / size_field;
 	tbl = new Tile * [size_field];
@@ -1137,7 +1137,7 @@ void Table::GeneratePositions() {
 			(*next_step)->Done();
 			std::vector<Peak*> help = FormGraph(peaks);
 			if (help.size() != 0) {
-				if (IsGraphConnectivity(0, help) != help.size()) {  //0->���������, �� �� ���������*
+				if (IsGraphConnectivity(0, help) != help.size()) {  
 					for (int i = 0; i < peaks.size(); i++) {
 						if (peaks[i]->GetNumber() >= 1000) {
 							peaks[i]->SetNumberAway();

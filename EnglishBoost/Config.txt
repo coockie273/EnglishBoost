@@ -1,5 +1,5 @@
 scale - 700
-currLevel - 10
+currLevel - 1
 maxLevel - 22
 maxWords - 8
 foundedWords - 

@@ -16,9 +16,9 @@ std::vector<Peak*> FormGraph(std::vector<Peak*>s) {
 int IsGraphConnectivity(int n, std::vector<Peak*>s) {
 
     int visitedVertices = 1;
-    s[n]->SetNumber();                         // помечаем вершину как пройденную
-    for (int i = 0; i < s[n]->GetConsCount(); i++) {                             // проходим по смежным с u вершинам
-        if (s[n]->GetCons()[i]->GetNumber() < 1000) {                    // проверяем, не находились ли мы ранее в выбранной вершине
+    s[n]->SetNumber();                         
+    for (int i = 0; i < s[n]->GetConsCount(); i++) {                             
+        if (s[n]->GetCons()[i]->GetNumber() < 1000) {                    
             auto it = std::find(s.begin(), s.end(), s[n]->GetCons()[i]);
             int i = it - s.begin();
             visitedVertices += IsGraphConnectivity(i, s);

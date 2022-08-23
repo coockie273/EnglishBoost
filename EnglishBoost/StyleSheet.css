@@ -1,0 +1,174 @@
+QPushButton#Settings {
+    image: url(Gear.png);
+    border-style: outset;
+    padding: 2px;
+
+}
+    QPushButton#Settings:hover {
+        border-style: outset;
+        border-radius: 12px;
+        border-color: black;
+        min-width: 200em;
+        padding: 2px;
+        image: url(Gear.png);
+        background: rgba(205, 214, 219, 0.3);
+    }
+QPushButton#Hint {
+    image: url(hint.png);
+    border-style: outset;
+    padding: 2px;
+}
+
+QPushButton#Hint:hover {
+    border-style: outset;
+    border-radius: 12px;
+    border-color: black;
+    min-width: 200em;
+    padding: 2px;
+    image: url(hint.png);
+    background: rgba(205, 214, 219, 0.3);
+}
+
+QWidget#SettingsWindow {
+    background: rgba(241, 241, 224,1);
+    border-color: black;
+    border-width: 13px;
+}
+
+QWidget#words {
+    border-style: outset;
+    border-radius: 12px;
+    border-color: black;
+    min-width: 0em;
+    padding: 2px;
+    background: rgba(205, 214, 219, 0.3);
+}
+
+QPushButton#close {
+    image: url(close.png);
+    border-style: outset;
+    padding: 2px;
+}
+
+    QPushButton#close:hover {
+        border-style: outset;
+        border-radius: 12px;
+        border-color: black;
+        min-width: 200em;
+        padding: 2px;
+        image: url(close.png);
+        background: rgba(205, 214, 219, 0.3);
+    }
+QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 18px;
+    border-radius: 9px;
+}
+
+QSlider::handle:horizontal {
+    width: 23px;
+    height: 23px;
+    margin:-2px;
+    background-image: url(slider-knob.png);
+}
+
+QSlider::add-page:qlineargradient {
+    background: lightgrey;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+QSlider::sub-page:qlineargradient {
+    background: blue;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+QPushButton#ButtonSettings {
+    border-style: inset;
+    border-radius: 12px;
+    border-color: black;
+    padding: 2px;
+    background: rgba(205, 214, 219, 0.3);
+}
+
+QPushButton#ButtonSettings::hover {
+    border-style: inset;
+    border-radius: 12px;
+    border-color: black;
+    padding: 2px;
+    background: rgba(205, 214, 219, 0.5);
+}
+
+QWidget#SecondLay {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(252, 169, 133,1),stop:0.4 rgba(252, 165, 133,1) stop:1 rgba(252, 160, 133,1))
+}
+QWidget#levels {
+    font: 35px Ink free;
+    color: white;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 12px;
+    padding: 2px;
+    background: rgba(117, 137, 191,1);
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(117, 137, 191,1),stop:0.4 rgba(110, 130, 197,1) stop:1 rgba(100, 100, 250,1))
+}
+
+    QWidget#levels::hover {
+        background: rgba(117, 137, 255,1);
+    }
+QWidget#blocked {
+    image: url(blocked.png);
+    font: 35px Ink free;
+    color: white;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 12px;
+    padding: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(117, 137, 191,1),stop:0.4 rgba(110, 130, 197,1) stop:1 rgba(100, 100, 250,1));
+}
+QWidget#blockedLeft {
+    image: url(blocked.png);
+    font: 35px Ink free;
+    color: white;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 12px;
+    padding: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(117, 137, 191,1),stop:0.4 rgba(110, 130, 197,1) stop:1 rgba(100, 100, 250,1));
+    padding-left: 10px;
+}
+QWidget#blockedRight {
+    image: url(blocked.png);
+    font: 35px Ink free;
+    color: white;
+    border-style: inset;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 12px;
+    padding: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(117, 137, 191,1),stop:0.4 rgba(110, 130, 197,1) stop:1 rgba(100, 100, 250,1));
+    padding-right: 10px;
+}
+QLabel#number {
+    font: 25px Ink free;
+    color: black;
+}
+
+QWidget#messageWindow {
+    border-style: outset;
+    border-radius: 12px;
+    background: rgba(241, 241, 224,1);
+}
+
+QWidget#LabelInWindow {
+    font: 35px Ink free;
+    color: black;
+}
